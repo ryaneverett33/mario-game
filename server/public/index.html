@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Redirector</title>
+    <script src="public/js/ua-parser.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        function redirect() {
+            var parser = new UAParser();
+            if (parser.getDevice().type === "mobile") {
+                window.location.href = "othercastle.html";
+            }
+            else {
+              window.location.href = "latest/";
+            }
+        }
+        redirect();
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
